@@ -30,7 +30,8 @@ yearOfBirth = input.nextInt();
 String leftNumberDay = String.format("%02d", dayOfBirth);
 String leftNumberMonth = String.format("%02d", monthOfBirth);
 String leftNumberYear = String.format("%04d", yearOfBirth);
-
+input.close();
+// Calcolo della password
 passwordNumber = dayOfBirth + monthOfBirth + yearOfBirth;
 
     System.out.println("Ho un utente che si chiama " + firstName + " " + lastName + ", nato il " + leftNumberDay + "/" + leftNumberMonth + "/" + leftNumberYear + ", il cui colore preferito è il " + favouriteColor + ". La sua password sarà " + firstName + "-" + lastName + "-" + favouriteColor + "-" + passwordNumber);
