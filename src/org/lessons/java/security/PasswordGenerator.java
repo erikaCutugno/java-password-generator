@@ -10,7 +10,8 @@ public static void main(String[] args) {
     int dayOfBirth;
     int monthOfBirth;
     int yearOfBirth;
-    int passwordNumber;
+    int passwordNumberSum;
+    String password;
 
 Scanner input = new Scanner(System.in);
 
@@ -32,8 +33,9 @@ String leftNumberMonth = String.format("%02d", monthOfBirth);
 String leftNumberYear = String.format("%04d", yearOfBirth);
 input.close();
 // Calcolo della password
-passwordNumber = dayOfBirth + monthOfBirth + yearOfBirth;
+passwordNumberSum = dayOfBirth + monthOfBirth + yearOfBirth;
+password = firstName + "-" + lastName + "-" + favouriteColor + "-" + passwordNumberSum;
 
-    System.out.println("Ho un utente che si chiama " + firstName + " " + lastName + ", nato il " + leftNumberDay + "/" + leftNumberMonth + "/" + leftNumberYear + ", il cui colore preferito è il " + favouriteColor + ". La sua password sarà " + firstName + "-" + lastName + "-" + favouriteColor + "-" + passwordNumber);
+    System.out.println("Ho un utente che si chiama " + firstName + " " + lastName + ", nato il " + leftNumberDay + "/" + leftNumberMonth + "/" + leftNumberYear + ", il cui colore preferito è il " + favouriteColor + ". La sua password sarà " + password);
 }
 }
